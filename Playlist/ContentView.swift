@@ -16,17 +16,16 @@ struct ContentView: View {
                         .resizable()
                         .frame(width: 250, height: 250)
                         .padding(.top, 20)
-                    Spacer()
-                    VStack {
-                        Button {
-                                
-                        }
-                        label: {
-                            Image(systemName: "download")
-                        }
-                        .foregroundColor(.black)
+                    HStack {
+                        Image(systemName: "arrow.down.circle.fill")
+                        Image(systemName: "person.fill.badge.plus")
+                        Spacer()
+                        Image(systemName: "play.circle.fill")
                     }
+                    .padding()
+                    Spacer()
                 }
+                .padding()
                 .frame(maxWidth: .infinity, minHeight: reader.size.height)
             }
         }
