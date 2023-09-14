@@ -11,6 +11,8 @@
 		C34475B72AAD34A400B40337 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34475B62AAD34A400B40337 /* ContentView.swift */; };
 		C34475B92AAD34A600B40337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C34475B82AAD34A600B40337 /* Assets.xcassets */; };
 		C34475BC2AAD34A600B40337 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C34475BB2AAD34A600B40337 /* Preview Assets.xcassets */; };
+		C37647012AB29F86000386CF /* Cover.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37647002AB29F86000386CF /* Cover.swift */; };
+		C37647032AB29F91000386CF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37647022AB29F91000386CF /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		C34475B62AAD34A400B40337 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C34475B82AAD34A600B40337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C34475BB2AAD34A600B40337 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C37647002AB29F86000386CF /* Cover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cover.swift; sourceTree = "<group>"; };
+		C37647022AB29F91000386CF /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 		C37646FF2AB29E8D000386CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C37647002AB29F86000386CF /* Cover.swift */,
+				C37647022AB29F91000386CF /* DataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34475B72AAD34A400B40337 /* ContentView.swift in Sources */,
+				C37647032AB29F91000386CF /* DataModel.swift in Sources */,
+				C37647012AB29F86000386CF /* Cover.swift in Sources */,
 				C34475B52AAD34A400B40337 /* PlaylistApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

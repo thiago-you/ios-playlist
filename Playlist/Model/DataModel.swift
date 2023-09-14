@@ -1,3 +1,10 @@
+//
+//  DataModel.swift
+//  Playlist
+//
+//  Created by user241334 on 9/13/23.
+//
+
 import Foundation
 
 final class DataModel {

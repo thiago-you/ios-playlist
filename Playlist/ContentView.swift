@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    let dataModel = DataModel()
+    
     var body: some View {
         GeometryReader { reader in
             ZStack {
@@ -55,7 +57,7 @@ struct ContentView: View {
                         .padding(.bottom, 30)
                         ForEach(dataModel.covers) { cover in
                             HStack {
-                                Image(cover.image)
+                                Image("$cover.image")
                                     .resizable()
                                     .font(.largeTitle)
                                     .bold()
