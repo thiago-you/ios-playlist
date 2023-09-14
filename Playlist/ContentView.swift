@@ -52,7 +52,28 @@ struct ContentView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                         .padding(.leading, -10)
-                        
+                        .padding(.bottom, 30)
+                        ForEach(dataModel.covers) { cover in
+                            HStack {
+                                Image(cover.image)
+                                    .resizable()
+                                    .font(.largeTitle)
+                                    .bold()
+                                    .symbolRenderingMode(.monochrome)
+                                    .scaledToFit()
+                                    .frame(width: 50, height: 50)
+                                VStack(alignment: .leading) {
+                                    Text(cover.title)
+                                        .font(.title)
+                                        .bold()
+                                    Text(cover.description)
+                                }
+                            }
+                            .padding()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .background(.white)
+                            .cornerRadius(16)
+                        }
                     }
                     Spacer()
                 }
