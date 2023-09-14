@@ -38,13 +38,21 @@ struct ContentView: View {
                             .font(.title)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.top, 20)
+                            .padding(.bottom, 5)
                         Text("Essa playlist é destinada aos melhores Jt. Leaners e Stans do Planeta ADDA!")
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.bottom, 10)
                         HStack {
                             Image("profile")
+                                .resizable()
+                                .frame(width: 50, height: 30)
+                                .clipShape(Circle())
                             Text("Playlist de Eminem")
+                                .font(.subheadline)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
+                        .padding(.leading, -10)
+                        
                     }
                     Spacer()
                 }
