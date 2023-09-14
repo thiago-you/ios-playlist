@@ -12,15 +12,13 @@ struct ContentView: View {
         GeometryReader { reader in
             ZStack {
                 VStack {
-                    Image("cover")
+                    Image("cover 1")
                         .resizable()
                         .frame(width: 250, height: 250)
                         .padding(.top, 20)
                     Spacer()
                     VStack {
-                        Button {
-                            label: "applelogo"
-                        }
+
                     }
                 }
                 .frame(maxWidth: .infinity, minHeight: reader.size.height)
