@@ -24,15 +24,22 @@ struct ContentView: View {
         ScrollView(showsIndicators: false) {
             GeometryReader { reader in
                 let offsetY = getOffsetY(reader: reader)
+                let height: CGFloat = (reader.size.height - offsetY) + offsetY / 3
+                let minHeight: CGFloat = 120
+                let opacity = (height - minHeight) / (reader.size.height - minHeight)
                 
                 ZStack {
                     Image("cover 1")
                         .resizable()
-                        .frame(width: reader.size.height, height: reader.size.height)
+                        .padding(.top, 20)
+                        .frame(width: height, height: height)
                         .offset(y: offsetY)
-                }.frame(width: reader.size.width)
+                        .opacity(Double(opacity))
+                        .shadow(color: Color.black.opacity(0.5), radius: 20)
+                }
+                .frame(width: reader.size.width)
             }
-            .frame(height: 200)
+            .frame(height: 240)
             VStack {
                 HStack {
                     Button(action: {}) {
