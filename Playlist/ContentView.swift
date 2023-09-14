@@ -18,7 +18,13 @@ struct ContentView: View {
                         .padding(.top, 20)
                     Spacer()
                     VStack {
-
+                        Button {
+                                
+                        }
+                        label: {
+                            Image(systemName: "download")
+                        }
+                        .foregroundColor(.black)
                     }
                 }
                 .frame(maxWidth: .infinity, minHeight: reader.size.height)
