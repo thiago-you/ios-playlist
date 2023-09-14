@@ -51,7 +51,7 @@
 		C34475B32AAD34A400B40337 /* Playlist */ = {
 			isa = PBXGroup;
 			children = (
-				C37646FF2AB29E8D000386CF /* Model2 */,
+				C37646FF2AB29E8D000386CF /* Model */,
 				C34475B42AAD34A400B40337 /* PlaylistApp.swift */,
 				C34475B62AAD34A400B40337 /* ContentView.swift */,
 				C34475B82AAD34A600B40337 /* Assets.xcassets */,
@@ -68,11 +68,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		C37646FF2AB29E8D000386CF /* Model2 */ = {
+		C37646FF2AB29E8D000386CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Model2;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
