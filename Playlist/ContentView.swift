@@ -32,7 +32,7 @@ struct ContentView: View {
                             Image(systemName: "play.circle.fill")
                                 .foregroundColor(Color.yellow)
                         }
-                        .font(.title)
+                        .font(.largeTitle)
                     }
                     .padding()
                     VStack {
@@ -42,6 +42,7 @@ struct ContentView: View {
                             .padding(.top, 20)
                             .padding(.bottom, 5)
                         Text("Essa playlist é destinada aos melhores Jt. Leaners e Stans do Planeta ADDA!")
+                            .fixedSize(horizontal: false, vertical: true)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.bottom, 10)
                         HStack {
@@ -54,27 +55,27 @@ struct ContentView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                         .padding(.leading, -10)
-                        .padding(.bottom, 30)
+                        .padding(.bottom, 10)
                         ForEach(dataModel.covers) { cover in
                             HStack {
-                                Image("$cover.image")
+                                Image(cover.image)
                                     .resizable()
                                     .font(.largeTitle)
                                     .bold()
                                     .symbolRenderingMode(.monochrome)
                                     .scaledToFit()
                                     .frame(width: 50, height: 50)
+                                    .padding(.trailing, 10)
+                                    .padding(.bottom, 10)
                                 VStack(alignment: .leading) {
                                     Text(cover.title)
-                                        .font(.title)
+                                        .font(.title2)
                                         .bold()
                                     Text(cover.description)
                                 }
                             }
-                            .padding()
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .background(.white)
-                            .cornerRadius(16)
                         }
                     }
                     Spacer()
