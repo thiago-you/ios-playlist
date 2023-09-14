@@ -9,13 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        GeometryReader { reader in
+            ZStack {
+                VStack {
+                    Image("cover")
+                        .resizable()
+                        .frame(width: 250, height: 250)
+                        .padding(.top, 20)
+                    Spacer()
+                    VStack {
+                        Button {
+                            label: "applelogo"
+                        }
+                    }
+                }
+                .frame(maxWidth: .infinity, minHeight: reader.size.height)
+            }
         }
-        .padding()
     }
 }
 
