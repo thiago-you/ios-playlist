@@ -42,7 +42,6 @@ struct ContentView: View {
                         .frame(width: height, height: height)
                         .offset(y: offsetY)
                         .opacity(Double(opacity))
-                        .shadow(color: Color.black.opacity(0.5), radius: 20)
                 }
                 .frame(width: reader.size.width)
             }
@@ -71,7 +70,7 @@ struct ContentView: View {
             .padding()
             VStack {
                 Text("Playlist Eminem")
-                    .font(.title)
+                    .font(.title.bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, 5)
                     .padding(.bottom, 5)
@@ -85,7 +84,7 @@ struct ContentView: View {
                         .frame(width: 50, height: 30)
                         .clipShape(Circle())
                     Text("Playlist de Eminem")
-                        .font(.subheadline)
+                        .font(.subheadline.bold())
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(.leading, -10)
