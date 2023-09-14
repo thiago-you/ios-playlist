@@ -33,73 +33,72 @@ struct ContentView: View {
                 }.frame(width: reader.size.width)
             }
             .frame(height: 200)
-                        VStack {
-                            HStack {
-                                Button(action: {}) {
-                                    Image(systemName: "arrow.down.circle.fill")
-                                        .foregroundColor(Color.black)
-                                        .padding(.trailing, 8)
-                                }
-                                Button(action: {}) {
-                                    Image(systemName: "person.fill.badge.plus")
-                                        .foregroundColor(Color.black)
-                                }
-                                Spacer()
-                                Button(action: {}) {
-                                    Image(systemName: "play.circle.fill")
-                                        .foregroundColor(Color.yellow)
-                                }
+            VStack {
+                HStack {
+                    Button(action: {}) {
+                        Image(systemName: "arrow.down.circle.fill")
+                            .foregroundColor(Color.black)
+                            .padding(.trailing, 8)
+                    }
+                    Button(action: {}) {
+                        Image(systemName: "person.fill.badge.plus")
+                            .foregroundColor(Color.black)
+                    }
+                    Spacer()
+                    Button(action: {}) {
+                        Image(systemName: "play.circle.fill")
+                            .foregroundColor(Color.yellow)
+                    }
+                    .font(.largeTitle)
+                }
+                .padding()
+                VStack {
+                    Text("Playlist Eminem")
+                        .font(.title)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.top, 5)
+                        .padding(.bottom, 5)
+                    Text("Essa playlist é destinada aos melhores Jt. Leaners e Stans do Planeta ADDA!")
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.bottom, 10)
+                    HStack {
+                        Image("profile")
+                            .resizable()
+                            .frame(width: 50, height: 30)
+                            .clipShape(Circle())
+                        Text("Playlist de Eminem")
+                            .font(.subheadline)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    .padding(.leading, -10)
+                    .padding(.bottom, 10)
+                    ForEach(dataModel.covers) { cover in
+                        HStack {
+                            Image(cover.image)
+                                .resizable()
                                 .font(.largeTitle)
-                            }
-                            .padding()
-                            VStack {
-                                Text("Playlist Eminem")
-                                    .font(.title)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .padding(.top, 5)
-                                    .padding(.bottom, 5)
-                                Text("Essa playlist é destinada aos melhores Jt. Leaners e Stans do Planeta ADDA!")
-                                    .fixedSize(horizontal: false, vertical: true)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .padding(.bottom, 10)
-                                HStack {
-                                    Image("profile")
-                                        .resizable()
-                                        .frame(width: 50, height: 30)
-                                        .clipShape(Circle())
-                                    Text("Playlist de Eminem")
-                                        .font(.subheadline)
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                }
-                                .padding(.leading, -10)
+                                .bold()
+                                .symbolRenderingMode(.monochrome)
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                                .padding(.trailing, 10)
                                 .padding(.bottom, 10)
-                                ForEach(dataModel.covers) { cover in
-                                    HStack {
-                                        Image(cover.image)
-                                            .resizable()
-                                            .font(.largeTitle)
-                                            .bold()
-                                            .symbolRenderingMode(.monochrome)
-                                            .scaledToFit()
-                                            .frame(width: 50, height: 50)
-                                            .padding(.trailing, 10)
-                                            .padding(.bottom, 10)
-                                        VStack(alignment: .leading) {
-                                            Text(cover.title)
-                                                .font(.title2)
-                                                .bold()
-                                            Text(cover.description)
-                                        }
-                                    }
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .background(.white)
-                                }
+                            VStack(alignment: .leading) {
+                                Text(cover.title)
+                                    .font(.title2)
+                                    .bold()
+                                Text(cover.description)
                             }
                         }
-                        .padding()
-                        .background(Color.white)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(.white)
                     }
-        
+                }
+            }
+            .padding()
+            .background(Color.white)
+        }
         .coordinateSpace(name: "scrollView")
     }
 }
